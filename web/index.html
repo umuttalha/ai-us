@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="tr" data-theme="  ">
+<head>
+  <meta charset="utf-8" />
+  <title>AI Among Us</title>
+  <style>
+    body{max-width:700px;margin:20px auto}
+    #chat{height:420px;overflow-y:auto}
+  </style>
+
+
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="p-4 space-y-4">
+
+    <!-- Giriş -->
+    <div id="login" class="space-y-2">
+      <input id="name" class="input input-bordered w-full" placeholder="Kullanıcı adın"/>
+      <button id="find" class="btn btn-primary w-full">Oda Bul</button>
+  
+      <p id="waiting" class="text-center hidden">
+        Bekleniyor: <span id="joined">0</span>/<span id="total">5</span>
+      </p>
+    </div>
+  
+    <!-- Sohbet -->
+    <div id="lobby" class="hidden space-y-2">
+      <h2><b>Konu:</b> <span id="topic"></span></h2>
+  
+      <div id="chat" class="flex flex-col gap-2"></div>
+  
+      <div class="flex gap-2">
+        <input id="msg" class="input input-bordered grow" autocomplete="off"/>
+        <button id="send" class="btn btn-accent">Gönder</button>
+      </div>
+    </div>
+  
+    <script src="app.js"></script>
+  </body>
+  </html>
